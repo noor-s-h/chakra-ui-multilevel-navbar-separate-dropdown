@@ -12,6 +12,7 @@ import {
 import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 import NavLink from "./NavLink";
+import DropDown from "./DropDown";
 
 export default function DeskTopMenu({
   label,
@@ -53,11 +54,7 @@ export default function DeskTopMenu({
             </Button>
           </PopoverTrigger>
           <PopoverContent width="inherit" minW="10rem" bg="white">
-            <List
-              px={{ base: "1rem", md: "0" }}
-              borderLeft={{ base: "1px", md: "0" }}
-              borderColor="gray.200"
-            >
+            <List>
               {childrens.map((childdata, index) => (
                 <ListItem key={index}>
                   <DeskTopMenu
