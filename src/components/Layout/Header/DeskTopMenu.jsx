@@ -12,7 +12,6 @@ import {
 import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 import NavLink from "./NavLink";
-import DropDown from "./DropDown";
 
 export default function DeskTopMenu({
   label,
