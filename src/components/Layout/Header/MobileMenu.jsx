@@ -32,9 +32,7 @@ export default function MobileMenu({ label, href, childrens, closeNav }) {
           <Collapse in={isOpen} unmountOnExit>
             <List pl="1rem" borderLeft="1px" borderColor="gray.200">
               {childrens.map((childdata, index) => (
-                <ListItem key={index}>
-                  <MobileMenu {...childdata} closeNav={closeNav} />
-                </ListItem>
+                  <MobileMenu key={index} {...childdata} closeNav={closeNav} />
               ))}
             </List>
           </Collapse>
