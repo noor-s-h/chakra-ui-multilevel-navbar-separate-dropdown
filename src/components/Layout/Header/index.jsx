@@ -21,6 +21,7 @@ export default function Header() {
   const { isOpen, onToggle, onClose } = useDisclosure();
   const [isDeskTop] = useMediaQuery("(min-width: 52em)");
   const [isMobile] = useMediaQuery("(max-width: 52em)");
+  const depthLevel = 0;
 
   return (
     <Box position="sticky" top={0} zIndex={1}>
@@ -52,7 +53,7 @@ export default function Header() {
           {isDeskTop && (
             <List display="flex" alignItems="center">
               {NavData.map((navdata, index) => (
-                <DeskTopMenu key={index} {...navdata} />
+                <DeskTopMenu key={index} {...navdata} depthLevel={depthLevel} />
               ))}
             </List>
           )}
