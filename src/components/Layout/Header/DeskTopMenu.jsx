@@ -55,13 +55,12 @@ export default function DeskTopMenu({
           <PopoverContent width="inherit" minW="10rem" bg="white">
             <List>
               {childrens.map((childdata, index) => (
-                <ListItem key={index}>
                   <DeskTopMenu
+                    key={index}
                     {...childdata}
                     depthLevel={depthLevel}
                     closeNav={onClose}
                   />
-                </ListItem>
               ))}
             </List>
           </PopoverContent>
