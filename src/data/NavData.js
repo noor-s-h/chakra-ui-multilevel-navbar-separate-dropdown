@@ -29,12 +29,30 @@ const NavData = [
     label: "Contact",
     childrens: [
       {
-        label: "Mobile",
-        href: "/mobile",
+        label: "Email",
+        href: "/email",
       },
       {
-        label: "Landline",
-        href: "/landline",
+        label: "Phone",
+        childrens: [
+          {
+            label: "Landline",
+            href: "/landline",
+          },
+          {
+            label: "Mobile",
+            childrens: [
+              {
+                label: "National",
+                href: "/national",
+              },
+              {
+                label: "International",
+                href: "/international",
+              },
+            ],
+          },
+        ],
       },
     ],
   },
