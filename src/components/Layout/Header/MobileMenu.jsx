@@ -10,6 +10,7 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import NavLink from "./NavLink";
+import DropDown from "./DropDown";
 
 export default function MobileMenu({ label, href, childrens, closeNav }) {
   const { isOpen, onToggle } = useDisclosure();
@@ -30,11 +31,7 @@ export default function MobileMenu({ label, href, childrens, closeNav }) {
             />
           </Button>
           <Collapse in={isOpen} unmountOnExit>
-            <List
-              px={{ base: "1rem", md: "0" }}
-              borderLeft={{ base: "1px", md: "0" }}
-              borderColor="gray.200"
-            >
+            <List pl="1rem" borderLeft="1px" borderColor="gray.200">
               {childrens.map((childdata, index) => (
                 <ListItem key={index}>
                   <MobileMenu {...childdata} closeNav={closeNav} />
