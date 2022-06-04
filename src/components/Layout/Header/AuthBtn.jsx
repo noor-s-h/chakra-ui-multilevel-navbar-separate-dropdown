@@ -1,8 +1,10 @@
-import NavLink from "./NavLink";
-import { Flex, useMediaQuery } from "@chakra-ui/react";
+import NavLink from './NavLink';
+import { Flex } from '@chakra-ui/react';
+
+import useMediaQuery from '@/lib/useMediaQuery';
 
 export default function AuthBtn({ closeNav }) {
-  const [isDeskTop] = useMediaQuery("(min-width: 52em)");
+  const isDeskTop = useMediaQuery('(min-width: 52em)');
 
   return (
     <Flex>

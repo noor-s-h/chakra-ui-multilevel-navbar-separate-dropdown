@@ -6,7 +6,6 @@ import {
   List,
   useDisclosure,
   Collapse,
-  useMediaQuery,
 } from "@chakra-ui/react";
 
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
@@ -16,11 +15,12 @@ import MobileMenu from "./MobileMenu";
 import DeskTopMenu from "./DeskTopMenu";
 import Logo from "./Logo";
 import AuthBtn from "./AuthBtn";
+import useMediaQuery from "@/lib/useMediaQuery"
 
 export default function Header() {
   const { isOpen, onToggle, onClose } = useDisclosure();
-  const [isDeskTop] = useMediaQuery("(min-width: 52em)");
-  const [isMobile] = useMediaQuery("(max-width: 52em)");
+  const isDeskTop = useMediaQuery("(min-width: 52em)");
+  const isMobile = useMediaQuery("(max-width: 52em)");
   const depthLevel = 0;
 
   return (
